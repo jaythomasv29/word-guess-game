@@ -1,0 +1,48 @@
+body {
+	color: #669999;
+	background-color: #226666;
+}
+
+.bkgrd {
+	background-color: #226666;
+	background-image: url("../images/abstract.jpg");
+	background-size: cover;
+	background-blend-mode: multiply;
+	background-position: center;
+}
+
+#new-game-btn {
+	outline: none;
+	border: none;
+	cursor: pointer;
+	display: block;
+	background-color: #669999;
+	position:relative;
+	font-size: 22px;
+	font-weight: bold;
+	color: 5f5f5e;
+	text-transform: uppercase;
+	line-spacing: 2px;
+	padding: 25px;
+	border-radius: 20px;
+	box-shadow: 0 6px #0D4D4D;
+}
+
+#new-game-btn:hover{
+	box-shadow: 0 4px #0D4D4D;
+	top: 2px;
+}
+
+#new-game-btn:active {
+	box-shadow: 0 0 #0D4D4D;
+	top: 6px;
+}
+
+#placeholder-section {
+	background-color: #0D4D4D;
+}
+
+#placeholders {
+	letter-spacing: 6px;
+	font-size: 40px;
+}
