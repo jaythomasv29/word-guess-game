@@ -26,7 +26,7 @@ var guessedLetterBank = []; //initial empty array until .push()
 var incorrectLetterBank = []; //initial empty array until .push()
 // newGame function to reset , picks new word and placeholder
 function newGame() {
-	
+
     //Reset all game info
     gameRunning = true;
     guessesLeft = 8;
@@ -67,7 +67,7 @@ function letterGuesser(letter) {
 
         for (var i = 0; i < pickedWord.length; i++) {
             // Convert to lowerCase for check
-            if (pickedWord[i].toLowerCase() === letter.toLowerCase()) {
+            if (pickedWord[i].toLowerCase() == letter.toLowerCase()) {
                 //If match, reassign letter with actual letter
                 pickedWordPlaceholderArr[i] = pickedWord[i];
             }
@@ -117,6 +117,19 @@ function checkWin() {
 }
 //Add event listeners for newGameBtn
 $newGameButton.addEventListener('click', newGame); //executes new game function
+
+//Event Listener for letter buttons on screen
+//------------Add Event Listner to Buttons--------//
+ 
+for (var i = 0; i < 26; i++) {
+    var butt = document.querySelectorAll("button");
+    butt[i].addEventListener("onmouseup", letterGuesser);
+    butt[i].addEventListener("onclick", letterGuesser);
+}
+
+document.onclick = function(event) {
+    letterGuesser(event.click);
+}
 
 // onkeyup event to trigger letterGuess
 document.onkeyup = function(event) {
